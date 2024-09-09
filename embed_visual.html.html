@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Power BI Visual</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/powerbi-client/2.12.0/powerbi.min.js"></script>
+</head>
+<body>
+    <div id="myVisualContainer" style="height: 400px; width: 600px;"></div>
+    <script>
+        // Your Power BI Embed configuration
+        var embedConfig = {
+            type: 'visual',
+            id: 'fab365a9-0648-4d0c-bce1-26d15e6b2e77', // Report ID
+            embedUrl: 'https://app.powerbi.com/reportEmbed?reportId=fab365a9-0648-4d0c-bce1-26d15e6b2e77&groupId=9ea77c1a-729d-4892-8bb6-39f3fef591ea', // Embed URL
+            accessToken: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ikg5bmo1QU9Tc3dNcGhnMVNGeDdqYVYtbEI5dyIsImtpZCI6Ikg5bmo1QU9Tc3dNcGhnMVNGeDdqYVYtbEI5dyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvNjY5NWJiNGEtMGU2My00ZmZlLWEzNWUtNzkwOGMxNWYzMTNhLyIsImlhdCI6MTcyNTg4NDQzMiwibmJmIjoxNzI1ODg0NDMyLCJleHAiOjE3MjU4ODgzMzIsImFpbyI6IkUyZGdZRGgvTVV6TzUzbU1RdlpFYjlYa0ltVmxBQT09IiwiYXBwaWQiOiIwMWQwNjNkMS1kODJlLTQ2YzktYjc1MC1lNDEzZGQ1NDU5NmQiLCJhcHBpZGFjciI6IjEiLCJpZHAiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC82Njk1YmI0YS0wZTYzLTRmZmUtYTM1ZS03OTA4YzE1ZjMxM2EvIiwiaWR0eXAiOiJhcHAiLCJvaWQiOiI5NTg4NzVlNS0zMDUyLTQ4YTYtOTY0MS01Y2Y1NjQ3MDNmY2YiLCJyaCI6IjAuQVNnQVNydVZabU1PX2stalhua0l3Vjh4T2drQUFBQUFBQUFBd0FBQUFBQUFBQUFvQUFBLiIsInN1YiI6Ijk1ODg3NWU1LTMwNTItNDhhNi05NjQxLTVjZjU2NDcwM2ZjZiIsInRpZCI6IjY2OTViYjRhLTBlNjMtNGZmZS1hMzVlLTc5MDhjMTVmMzEzYSIsInV0aSI6IlhfVDlDcUtoOVVtNFFUVUZaVnBhQUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfaWRyZWwiOiIyNiA3In0.gsu8tlIYD2XJLj5VoKD65yQLvBZWeaIRJxdBEMQi4AbARooLNx2TZ5VXaSjXBW7Db85ybSoaXBRO6NEjC1V2CwJGpuxr-MfZG24mTMpMHkMc-Lsv0PxiYJwUg_CqVj02sYLJ79iwdK1KQOprPYLlSovS7rOvaIrCSB27fDmD7A1a0SYb5uO8MLHfXJxfaXDudTa4wQnkWmRXwu_yBz7-FJSWc0NJsArBgDnhTKs68Lj2a5NE_o8Hy_QFDlpo7-w0KDBkLm83aodcAu7pst-JvKHOo5kvrtHw6IkeWzUieyoylBIM1NxNZHQaGFUS_zXAaSYMjB6k-0mlPxIETil3Dg', // Replace with your valid access token
+            settings: {
+                filterPaneEnabled: false,
+                navContentPaneEnabled: false
+            },
+            visual: {
+                visualName: 'acdd2ddabeb289c51beb' // Visual ID
+            }
+        };
+
+        // Embed the visual
+        var embedContainer = document.getElementById('myVisualContainer');
+        powerbi.embed(embedContainer, embedConfig);
+    </script>
+</body>
+</html>
+
